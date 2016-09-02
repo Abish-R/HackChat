@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="6dp"
+    android:orientation="vertical"
+    android:background="@color/light_blue"
+    tools:context="helix.hackchat.ChatActivity">
+    <TextView
+        android:gravity="center"
+        android:id="@+id/dummy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/old_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="old messages"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_blue"
+        android:layout_weight="1"
+        android:layout_marginBottom="2dp"
+        android:gravity="bottom"
+        ></ListView>
+    <LinearLayout
+        android:background="@color/lighta_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight=".8"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:inputType="textMultiLine"
+            android:minLines="1"
+            android:maxLines="4"
+            android:maxLength="255"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:layout_weight=".2">
+            <Button
+                android:id="@+id/send"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Send"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
